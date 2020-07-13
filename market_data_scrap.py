@@ -21,7 +21,7 @@ batch_size = 750
 bitmex_client = bitmex(test=False, api_key=bitmex_api_key, api_secret=bitmex_api_secret)
 binance_client = Client(api_key=binance_api_key, api_secret=binance_api_secret)
 
-OLDEST_POINT = '1 Jul 2020'
+OLDEST_POINT = '13 Jul 2018'    #Modify this to the oldest data you want
 
 ### FUNCTIONS
 def minutes_of_new_data(symbol, kline_size, data, source):
@@ -74,7 +74,4 @@ def get_all_bitmex(symbol, kline_size, save = False):
     print('All caught up..!')
     return data_df
 
-def get_last_5m()
-
-
-data = get_all_binance('BTCUSDT', '1m', save = True)
+data = get_all_binance('BNBBTC', '5m', save = True)
